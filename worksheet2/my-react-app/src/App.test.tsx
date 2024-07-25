@@ -1,9 +1,15 @@
-import './App.css';
+import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './App';
 
-const App = () => (
-  <div className="App">
-    <h1>Welcome to CISE – the home of learning and fun</h1>
-  </div>
-);
+    it('renders without crashing', () => {
+      const div = document.createElement('div');
+      ReactDOM.render(<App />, div);
+      ReactDOM.unmountComponentAtNode(div);
+    });
+    describe('Addition', () => {
+      it('knows that 2 and 2 make 4', () => {
+        expect(2 + 2).toBe(4);
+      });
+    });
 
-export default App;
